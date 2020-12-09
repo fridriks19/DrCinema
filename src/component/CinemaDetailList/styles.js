@@ -55,4 +55,9 @@ export default StyleSheet.create({
     //flexDirection: 'row',
     //justifyContent: 'space-between'
   },
+  listEmpty: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
 });

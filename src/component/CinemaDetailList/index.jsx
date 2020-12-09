@@ -42,6 +42,11 @@ const CinemaDetailList = ({movies}) => {
 
   <SafeAreaView style={styles.container}>
     <FlatList
+      ListEmptyComponent={() => (
+          <View style={styles.listEmpty}>
+            <Text >No movies Found</Text>
+          </View>
+        )}
       data={movies}
       renderItem={renderItem}
       keyExtractor={(item) => item._id}

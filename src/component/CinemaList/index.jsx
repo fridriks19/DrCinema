@@ -27,6 +27,11 @@ const CinemaList = ({ cinemas, navigation: { navigate } }) => {
   return (
     <SafeAreaView style={styles.container}>
     <FlatList
+      ListEmptyComponent={() => (
+          <View style={styles.listEmpty}>
+            <Text >No cinemas Found (Might need to refresh the "Cinemas" View)</Text>
+          </View>
+        )}
       data={cinemas}
       renderItem={renderItem}
       keyExtractor={(item) => item.id.toString()}
