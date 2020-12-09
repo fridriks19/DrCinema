@@ -5,7 +5,9 @@ const { width: winWidth } = Dimensions.get('window');
 export default StyleSheet.create({
   cinemaContainer: {
     backgroundColor: lightyBlue,
-
+    borderWidth: 1,
+    marginRight: 2,
+    marginLeft: 2
   },
   text: {
     margin: 1
