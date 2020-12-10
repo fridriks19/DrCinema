@@ -7,16 +7,16 @@ export default StyleSheet.create({
     backgroundColor: lightyBlue,
     borderWidth: 1,
     marginRight: 2,
-    marginLeft: 2
+    marginLeft: 2,
   },
   text: {
-    margin: 1
+    margin: 3
   },
   websiteLink:{
-    margin: 1
+    margin: 3
   },
   name: {
-    marginTop: 5,
+    marginTop: 2,
     textAlign: 'center',
     fontSize: 30,
     color: "white"

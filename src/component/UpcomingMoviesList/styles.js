@@ -1,5 +1,5 @@
 import { StyleSheet, StatusBar, Dimensions } from 'react-native';
-import { lightYellow, sweetPink, darkBlueShade } from '../../styles/color';
+import { lightYellow, sweetPink, lightBlueSky, greyBlue, darkBlueShade } from '../../styles/color';
 
 const { width: winWidth } = Dimensions.get('window');
 export default StyleSheet.create({
@@ -16,7 +16,7 @@ export default StyleSheet.create({
     width: 170,
     height: 200,
     borderRadius: 1,
-    borderWidth: 3
+    borderWidth: 1
   },
   item: {
     padding: 2,
@@ -28,19 +28,19 @@ export default StyleSheet.create({
   textt: {
     flex: 1,
     padding: 2,
+    padding: 10,
     justifyContent: 'space-between',
   },
   titleText: {
     color: 'white',
-    paddingTop: 10,
+    paddingTop: 7,
     textAlign: 'center',
     fontSize: 20,
     fontWeight: 'bold'
   },
   movieText: {
     color: 'white',
-    //paddingTop: 20,
-    padding: 3,
+    paddingBottom: 20,
     //textAlign: 'center',
     fontSize: 16,
   },
@@ -52,13 +52,6 @@ export default StyleSheet.create({
   itemView: {
     flex: 1,
     flexDirection: 'row',
-    //justifyContent: 'space-between'
-  },
-  imageView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    //flexDirection: 'row',
     //justifyContent: 'space-between'
   },
   listEmpty: {

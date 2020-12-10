@@ -21,7 +21,7 @@ class CinemaDetails extends Component {
 
   getMovieForCinema(){
     const { navigation } = this.props;
-    //console.log(this.props.allMovies.movie)
+    //console.log(this.props.allMovies)
     const movieData = this.props.allMovies.movie
     var movieList = [];
     const cinemaDetails = navigation.getParam('cinemaDetails', '')
@@ -45,6 +45,7 @@ class CinemaDetails extends Component {
       />
       <CinemaDetailList
         movies={ movies }
+        cinemaDetails={ cinemaDetails }
       />
     </View>
     )

@@ -7,12 +7,14 @@ import styles from './styles';
 
 class Cinemas extends Component {
   state ={
-    cinemas: []
+    cinemas: [],
   }
 
   componentDidMount(){
     this.setState({cinemas: this.props.allCinemas.cinema})
   }
+
+
 
   render() {
     const { cinemas } = this.state;

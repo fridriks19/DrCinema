@@ -3,19 +3,10 @@ import { withNavigation } from 'react-navigation';
 import { View, FlatList, Text, SafeAreaView, TouchableOpacity, Image } from 'react-native';
 import styles from './styles';
 
-const GenreGetter = ({item}) => {
-  var genres = ""
-  for (let i=0; i<item.length;i++){
-    genres = genres.concat(item[i].Name+ "   ")
-  }
-  return genres
-};
-
-const Item = ({ item, onPress }) => (
+const Item = ({ item }) => (
 
   <TouchableOpacity
-    style={styles.item}
-    onPress={onPress}>
+    style={styles.item}>
     <View style={styles.itemView}>
       <View>
         <Image
@@ -25,20 +16,18 @@ const Item = ({ item, onPress }) => (
       </View>
       <View style={styles.textt}>
         <Text style={styles.titleText}>{item.title}</Text>
-        <Text style={styles.movieText}>Útgáfuár: {item.year}</Text>
-        <Text style={styles.movieText}><GenreGetter item={item.genres}/></Text>
+        <Text style={styles.movieText}>Útgáfudagur: {item["release-dateIS"]}</Text>
       </View>
+
     </View>
   </TouchableOpacity>
 );
 
-const CinemaDetailList = ({movies, cinemaDetails, navigation: { navigate }}) => {
+const UpcomingMoviesList = ({ upcomingMovies }) => {
   const renderItem = ({ item }) => {
-  //console.log(movies)
   return(
     <Item
       item={item}
-      onPress={() => navigate('movieDetailScreen', {movieDetails: item, cinemaDetails: cinemaDetails})}
     />
     );
   }
@@ -51,7 +40,7 @@ const CinemaDetailList = ({movies, cinemaDetails, navigation: { navigate }}) => 
             <Text >No movies Found</Text>
           </View>
         )}
-      data={movies}
+      data={upcomingMovies}
       renderItem={renderItem}
       keyExtractor={(item) => item._id}
     />
@@ -60,4 +49,4 @@ const CinemaDetailList = ({movies, cinemaDetails, navigation: { navigate }}) => 
 };
 
 
-export default withNavigation(CinemaDetailList);
+export default UpcomingMoviesList;
